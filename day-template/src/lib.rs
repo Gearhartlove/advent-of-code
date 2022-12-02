@@ -4,14 +4,12 @@ use part_two::process_two;
 mod part_one;
 mod part_two;
 
-
-#[test] 
+#[test]
 fn part_one() {
     let result = process_one();
 }
 
-
-#[test] 
+#[test]
 fn part_two() {
     let result = process_two();
 }

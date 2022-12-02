@@ -4,15 +4,15 @@ use part_two::process_two;
 mod part_one;
 mod part_two;
 
-
-#[test] 
+#[test]
 fn part_one() {
-    println!("hello world");
     let result = process_one();
+    println!("{}", result);
+    assert!(true);
 }
 
-
-#[test] 
+#[test]
 fn part_two() {
     let result = process_two();
+    dbg!(result);
 }

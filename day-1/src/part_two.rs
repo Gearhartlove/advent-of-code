@@ -1,5 +1,5 @@
 pub fn process_two() -> String {
-    let mut elves_total_calories: Vec<u64> = vec!();
+    let mut elves_total_calories: Vec<u64> = vec![];
     let content = std::fs::read_to_string("input.txt").expect("Could not find file.");
 
     for elf in content.split("\r\n\r\n") {
