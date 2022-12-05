@@ -30,7 +30,7 @@ impl FromIterator<usize> for Round {
         let mut iter = iter.into_iter();
         Round {
             Them: RPS::from(iter.next().unwrap()),
-            RoundResult: RoundResult::from(iter.next().unwrap())
+            RoundResult: RoundResult::from(iter.next().unwrap()),
         }
     }
 }
@@ -56,7 +56,7 @@ impl Round {
             (RPS::Scissors, RoundResult::Loss) => RPS::Paper,
             (RPS::Paper, RoundResult::Loss) => RPS::Rock,
         };
-        return me as usize
+        return me as usize;
     }
 }
 
@@ -68,13 +68,12 @@ enum RoundResult {
 }
 
 impl From<&str> for RoundResult {
-    fn from(round_result: &str) -> Self { 
+    fn from(round_result: &str) -> Self {
         match round_result {
             "Z" => RoundResult::Win,
             "Y" => RoundResult::Draw,
             "X" => RoundResult::Loss,
             _ => panic!("Unrecognized user input."),
-        
         }
     }
 }
@@ -112,9 +111,9 @@ impl From<usize> for RPS {
     fn from(item: usize) -> Self {
         match item {
             1 => RPS::Rock,
-            2 => RPS::Paper, 
+            2 => RPS::Paper,
             3 => RPS::Scissors,
-            _ => panic!("User input not recognized.")
-        } 
+            _ => panic!("User input not recognized."),
+        }
     }
 }

@@ -1,8 +1,7 @@
-use std::collections::{HashSet};
+use std::collections::HashSet;
 
 pub fn process_one() -> String {
-    let content = std::fs::read_to_string("input.txt")
-        .expect("Could not find file");
+    let content = std::fs::read_to_string("input.txt").expect("Could not find file");
     let mut total: u64 = 0;
     for line in content.lines() {
         let mut start_hash: HashSet<char> = HashSet::new();
@@ -29,12 +28,8 @@ pub fn process_one() -> String {
 
 fn value(item: char) -> u64 {
     match item {
-        'a'..='z' => {
-            item as u64- 96
-        },
-        'A'..='Z' => {
-            item as u64 - 38
-        }
-        _ => panic!("unrecognized input")
+        'a'..='z' => item as u64 - 96,
+        'A'..='Z' => item as u64 - 38,
+        _ => panic!("unrecognized input"),
     }
 }
