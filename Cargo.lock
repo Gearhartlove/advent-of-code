@@ -26,6 +26,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-5"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
 name = "day-template"
 version = "0.1.0"
 
