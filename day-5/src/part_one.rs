@@ -100,6 +100,10 @@ fn organize_crates(crates: &mut Vec<Vec<&str>>, instructions: Vec<Instruction>) 
     dbg!(crates.clone());
 }
 
+fn crate_has_contents(c: &str) -> bool {
+    c.len() == 1
+}
+
 pub fn process_one(input: &str) -> String {
     let content = std::fs::read_to_string(input).expect("Could not find file");
     let (rest, mut crates) = crate_collection(&content).unwrap();
@@ -115,6 +119,4 @@ pub fn process_one(input: &str) -> String {
     result
 }
 
-fn crate_has_contents(c: &str) -> bool {
-    c.len() == 1
-}
+
